@@ -14,7 +14,7 @@ function displayBudget() {
     return document.getElementById('amount-available').innerHTML = money;
 }
 
-// change div background depending on budget/total comparison
+// change div background depending on budget/total comparison; some change for git
 function changeBackground() {
     if (Number(document.getElementById('amount-available').innerHTML) == 0 || Number(document.getElementById('amount-required').innerHTML) == 0) {
         document.getElementById('afford-check').style.backgroundColor = 'inherit';
