@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Christmas Shopping Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Christmas shopping calculator">
+        <meta name="keywords" content="Christmas, shopping, calculator, gift list">
+        <meta name="author" content="Szymon Abramowski">
+        <link rel='preconnect' href='https://fonts.gstatic.com'>
+        <link href='https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap' rel='stylesheet'>
+        <link rel='preconnect' href='https://fonts.gstatic.com'>
+        <link href='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='main.css'>
+    </head>
+    
+    <body>
+        <img src='/images/deco.png' alt='Christmas decoration' class='image-1'>
+        <img src='/images/deco.png' alt='Christmas decoration' class='image-2'>
+        <!-- <img src='/images/tree.png' alt='Christmas tree' class='tree-1'>        
+        <img src='/images/tree.png' alt='Christmas tree' class='tree-2'> -->
+        <div class='container'>
+            <h1>Welcome to the Christmas Shopping Calculator!</h1>            
+                <h3>You need to enter your budget and select the gifts you want to buy.</h2>
+                    <div>
+                        <h4>Budget</h4>
+                            <label for='budget'>Please enter how much you can spend (in EUR).</label>
+                            <input type='number' id='budget' name='budget' min='1'>
+                            <button type='button' onclick='displayBudget()'>Submit</button>
+                    </div>
+                <h3>Gifts</h3>
+                    <div class='gift-list'> <!-- change to unobtrusive JS; some change for git -->
+                        <table class='gift-sheet'>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='gloves' value=17 onclick='addPrice(this.id);changeBackground()'> <!-- add button for total cost? (displaying value for 'you will need') -->
+                                    <label for='gloves'>Snowboard gloves</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='sweater' value=20.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='sweater'>Christmas sweater</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='book' value=12 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='book'>Book</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='socks' value=8.20 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='socks'>Socks</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='wine' value=10.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='wine'>Wine</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='candles' value=8.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='candles'>Scented candles</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='coffee' value=11.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='coffee'>Coffee</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='laptop' value=1150 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='laptop'>Gaming laptop</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='mouse' value=29.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='mouse'>Computer mouse</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='headphones' value=32 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='headphones'>Headphones</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='toy-figure' value=13.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='toy-figure'>Superhero toy figure</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='necklace' value=145 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='necklace'>Necklace</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='scarf' value=24.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='scarf'>Scarf</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='shoes' value=50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='shoes'>Shoes</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='yoga-mat' value=47.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='yoga-mat'>Yoga mat</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='knives' value=39.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='knives'>Kitchen knives</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='smartwatch' value=61.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='smartwatch'>Smartwatch</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='tickets' value=200 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='tickets'>Two flight tickets</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='towels' value=54.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='towels'>Towels</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='whisky' value=69.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='whisky'>Whisky</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='earrings' value=110 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='earrings'>Earrings</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='perfume' value=46 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='perfume'>Perfume</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type='checkbox' id='smartphone' value=499.50 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='smartphone'>Smartphone</label><br>
+                                </td>
+                                <td>
+                                    <input type='checkbox' id='toy-car' value=15 onclick='addPrice(this.id);changeBackground()'>
+                                    <label for='toy-car'>Toy car</label><br>
+                                </td>
+                            </tr>       
+                        </table>
+                    </div><br>
+                    <div id='afford-check'>
+                        <p class='amounts'>You will need: </p>
+                        <p class='inline'>&euro;&nbsp;</p><p class='amounts inline' id='amount-required' value='' onchange='affordCheckBgColor()'>0</p>
+                        <p class='amounts'>You have: </p>
+                        <p class='inline'>&euro;&nbsp;</p><p class='amounts inline' id='amount-available' value='' onchange='affordCheckBgColor()'>0</p>    
+                    </div>
+                    <!-- <div class='tree-chain'>
+                        <p style="display: none;">Christmas tree chain</p>
+                    </div> -->
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+
+</html>
