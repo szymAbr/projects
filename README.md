@@ -1,0 +1,2 @@
+# ChristmasShoppingCalculator
+This is my first project - Christmas Shopping Calculator. Users can enter their budget for Christmas gifts and then choose the gifts from the list. Choosing gifts increases the total amount of money required to buy chosen goods. This amount is tested against the user's budget (both are displayed at the bottom of the page), resulting in changing the field's color (red when the amount required exceeds the budget, green otherwise).
