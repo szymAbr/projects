@@ -2,13 +2,15 @@ body {
     background-color: #d6f5f5;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    margin: auto;   
+    margin: auto;
+    
 }
 
-/* content moving left on vertical mobile display */
 .container {
     margin: auto;
-    max-width: 50%;
+    position: absolute;
+    left: 25%;
+    right: 25%;
 }
 
 h1 {
@@ -40,27 +42,26 @@ h1 {
     right: 5%;    
 }
 
-.gift-list { /* background image disappears when changing gift-list size */
+.gift-list {
     display: block;
     position: relative;
-    background-image: url('images/sheet.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: auto;
-    text-align: left;
-    width: 420px;
-    height: 550px;
 }
 
 .gift-sheet {
-    position: absolute;
-    left: 9%;
-    top: 13%;
-    font-family: 'Mountains of Christmas', cursive;
-    font-size: 20px;
-    font-weight: 600;
-    color: #293915;
+    margin: auto;
+    width: 50%;
+    height: auto;
+    text-align: left;
+    border-style: groove;
+    border-color: tomato;
+    border-width: 1em;
+    padding: 2%;
+    padding-right: 0.5%;
+    padding-left: 4%;
+    left: 5%;
+    right: 5%;
+    display: block;
+    overflow: auto;
 }
 
 img {
@@ -78,65 +79,3 @@ img {
 .inline {
     display: inline-block;
 }
-
-/* .amounts {
-    background-color: antiquewhite;
-    margin: auto;
-    width: 30%;
-}
-
-.tree-chain {
-    width: auto;
-    height: 200px;
-    position: fixed;
-    bottom: 0;
-    background-image: url('/images/tree.png');
-    background-size: contain;
-    background-repeat: repeat-x;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-}
-
-    margin-left: 300px;
-    margin-right: 300px;
-    border-style: dotted;
-    border-color: #cc0000;
-}
-
-.gift-list {
-    margin: auto;
-    text-align: left;
-    border-style: dotted;
-    border-color: #cc0000;
-}
-
-.tree-1 {
-    width: 200px;
-    height: auto;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    transform: scaleX(-1);
-    position: fixed;
-    bottom: 0;
-    left: 50px;
-}
-
-.tree-2 {
-    width: 200px;
-    height: auto;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    position: fixed;
-    bottom: 0;
-    right: 50px;
-}
-
-.sheet {
-    width: 400px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;    
-}
-
-15.6'' laptop viewport width ~~ 38cm //// width of gift-sheet: 26.32vw */

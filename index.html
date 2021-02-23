@@ -20,11 +20,9 @@
     <body>
         <img src='/images/deco.png' alt='Christmas decoration' class='image-1'>
         <img src='/images/deco.png' alt='Christmas decoration' class='image-2'>
-        <!-- <img src='/images/tree.png' alt='Christmas tree' class='tree-1'>        
-        <img src='/images/tree.png' alt='Christmas tree' class='tree-2'> -->
         <div class='container'>
             <h1>Welcome to the Christmas Shopping Calculator!</h1>            
-                <h3>You need to enter your budget and select the gifts you want to buy.</h2>
+                <h3>You need to enter your budget and select the gifts you want to buy.</h3>
                     <div>
                         <h4>Budget</h4>
                             <label for='budget'>Please enter how much you can spend (in EUR).</label>
@@ -36,7 +34,7 @@
                         <table class='gift-sheet'>
                             <tr>
                                 <td>
-                                    <input type='checkbox' id='gloves' value=17 onclick='addPrice(this.id);changeBackground()'> <!-- add button for total cost? (displaying value for 'you will need') -->
+                                    <input type='checkbox' id='gloves' value=17 onclick='addPrice(this.id);changeBackground()'>
                                     <label for='gloves'>Snowboard gloves</label><br>
                                 </td>
                                 <td>
@@ -155,16 +153,13 @@
                                 </td>
                             </tr>       
                         </table>
-                    </div><br>
+                    </div>
                     <div id='afford-check'>
                         <p class='amounts'>You will need: </p>
                         <p class='inline'>&euro;&nbsp;</p><p class='amounts inline' id='amount-required' value='' onchange='affordCheckBgColor()'>0</p>
                         <p class='amounts'>You have: </p>
                         <p class='inline'>&euro;&nbsp;</p><p class='amounts inline' id='amount-available' value='' onchange='affordCheckBgColor()'>0</p>    
                     </div>
-                    <!-- <div class='tree-chain'>
-                        <p style="display: none;">Christmas tree chain</p>
-                    </div> -->
         </div>
         <script type="text/javascript" src="script.js"></script>
     </body>
